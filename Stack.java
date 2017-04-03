@@ -2,6 +2,8 @@ package Homework4;
 
 public class Stack {
 	
+	private Node top = null;
+	
 	public void push(){
 		
 	}
@@ -12,6 +14,10 @@ public class Stack {
 	
 	public Node pop(){
 		
+	}
+	
+	public Node peek(){
+		return this.top;
 	}
 	
 }
