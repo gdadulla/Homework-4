@@ -20,7 +20,14 @@ public class Stack {
 	}
 	
 	public Node pop(){
-		
+		if(this.isEmpty()){
+			return null;
+		}
+		else{
+			Node temp = this.top;
+			top = top.getNext();
+			return temp;
+		}
 	}
 	
 	public Node peek(){
