@@ -2,7 +2,7 @@ package Homework4;
 
 public class Stack {
 	
-	private Node top = null;
+	public Node top = null;
 
 	
 	public void push(Node n){
