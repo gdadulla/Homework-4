@@ -34,4 +34,17 @@ public class Stack {
 		return this.top;
 	}
 	
+	public void print(){
+		if(isEmpty()){
+			System.out.println("The list is empty");	
+		}
+		else{
+			Node temp = top;
+			while(temp != null){
+				System.out.println(temp);
+				temp = temp.getNext();
+			}
+		}
+	}
+	
 }
