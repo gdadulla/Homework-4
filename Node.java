@@ -1,6 +1,12 @@
+/*
+ * Germaine Dadulla
+ * CSI/CEN 213
+ * Professor Magnus
+ * April 9, 2017
+ * 
+ * H4
+ */
 package Homework4;
-
-
 
 public class Node {
 	
