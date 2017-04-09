@@ -47,8 +47,9 @@ public class Queue{
 		}
 		else{
 			System.out.println("dequeue -> " + top);
-			this.top = this.top.getNext();
-			return this.top;
+			Node temp = top;
+			this.top = top.getNext();
+			return temp;
 		}
 	}
 

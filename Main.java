@@ -13,18 +13,22 @@ public class Main {
 	
 	public static void transferFromQueueToStack(Stack s, Queue q){
 		 while(!q.isEmpty()){
-			 Node temp
+			 Node temp = q.dequeue();
+			 s.push(temp.getName());
+			 }
 		 }
-	      
-	   }
+
 	
-	public static void transferFromStackToStack(){
-		  
-	       
-	   }
+	public static void transferFromStackToStack(Stack s, Stack s2){
+		  while(!s.isEmpty()){
+			Node temp = s.pop();
+			s2.push(temp.getName());
+			}
+		   }
 	
 	   public static void main (String [] args){
 		Stack s = new Stack();
+		Stack s2 = new Stack();
 		Queue q = new Queue();
 		
 		s.push("Germaine");
@@ -32,21 +36,31 @@ public class Main {
 		s.push("Jamell");
 		s.push("Vinny");
 		
+		s2.push("Germaine");
+		s2.push("Mike");
+		s2.push("Jamell");
+		s2.push("Vinny");
+		
 		q.enqueue("Germaine");
 		q.enqueue("Mike");
 		q.enqueue("Jamell");
 		q.enqueue("Vinny");
-		q.print();
-		System.out.println("");
-		
-		q.dequeue();
-		q.print();
-		System.out.println("");
-		
 		
 		Queue transfer = new Queue();
 		transferFromStackToQueue(s, transfer);
 		transfer.print();
+		System.out.println("--------");
+		
+		Stack transfer2 = new Stack();
+		transferFromQueueToStack(transfer2, q);
+		transfer2.print();
+		System.out.println("--------");
+		
+		Stack transfer3 = new Stack();
+		transferFromStackToStack(s2, transfer3);
+		transfer3.print();
+		System.out.println("--------");
+	
 	
 	
 		}

@@ -14,7 +14,7 @@ public class Stack {
 			this.top = temp;
 		}
 		else{
-			temp.setNext(top);
+			temp.setNext(this.top);
 			this.top = temp;
 		}
 	}
