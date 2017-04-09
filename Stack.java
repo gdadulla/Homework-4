@@ -2,30 +2,34 @@ package Homework4;
 
 public class Stack {
 	
-	public Node top = null;
+	public Node top;
 
+	Stack(){
+		top = null;
+	}
 	
-	public void push(Node n){
+	public void push(String s){
+		Node temp = new Node(s, null);
 		if(this.isEmpty()){
-			this.top = n;
+			this.top = temp;
 		}
 		else{
-			n.setNext(top);
-			this.top = n;
+			temp.setNext(top);
+			this.top = temp;
 		}
 	}
 	
 	public boolean isEmpty(){
-		return this.top == null;
+		return top == null;
 	}
 	
 	public Node pop(){
 		if(this.isEmpty()){
-			return null;
+			return null;	
 		}
 		else{
 			Node temp = this.top;
-			top = top.getNext();
+			this.top = this.top.getNext();
 			System.out.println("pop -> " + temp.getName());
 			return temp;
 		}
@@ -36,11 +40,11 @@ public class Stack {
 	}
 	
 	public void print(){
-		if(isEmpty()){
-			System.out.println("The list is empty");	
+		if(this.isEmpty()){
+			System.out.println("List is empty");	
 		}
 		else{
-			Node temp = top;
+			Node temp = this.top;
 			while(temp != null){
 				System.out.println(temp);
 				temp = temp.getNext();
