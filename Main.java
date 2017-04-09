@@ -1,30 +1,48 @@
 package Homework4;
 
-import java.util.Iterator;
-
 public class Main {
 	
+	//method that transfers a Stack to a Queue
 	public static void transferFromStackToQueue(Stack s, Queue q){
+		
+		//while stack is not empty
 		while(!s.isEmpty()){
-		Node temp = s.pop();
-		q.enqueue(temp.getName());
-		}
-	   }
-	
-	public static void transferFromQueueToStack(Stack s, Queue q){
-		 while(!q.isEmpty()){
-			 Node temp = q.dequeue();
-			 s.push(temp.getName());
-			 }
-		 }
-
-	
-	public static void transferFromStackToStack(Stack s, Stack s2){
-		  while(!s.isEmpty()){
+			
+			//temp variable is set to what the stack pops
 			Node temp = s.pop();
+			
+			//enqueues the temp
+			q.enqueue(temp.getName());
+		}
+	}
+	
+	//method that transfers Queue to Stack
+	public static void transferFromQueueToStack(Stack s, Queue q){
+		
+		//while stack is not empty
+		while(!q.isEmpty()){
+			
+			//temp variable is set to what queue dequeues
+			 Node temp = q.dequeue();
+			 
+			 //pushes the temp
+			 s.push(temp.getName());
+		 }
+	 }
+
+	//method that transfers Stack to another Stack
+	public static void transferFromStackToStack(Stack s, Stack s2){
+		  
+		//while s is not empty
+		while(!s.isEmpty()){
+			
+			//temp variable set to what s pops
+			Node temp = s.pop();
+			
+			//s2 pushes temp 
 			s2.push(temp.getName());
-			}
-		   }
+		}
+	}
 	
 	   public static void main (String [] args){
 		Stack s = new Stack();
