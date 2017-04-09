@@ -28,4 +28,8 @@ public class Node {
 		return next;
 	}
 	
+	public String toString(){
+		return "Name: " + this.name;
+	}
+	
 }

@@ -21,10 +21,7 @@ public class Main {
 		s.pop();
 		s.print();
 		
-		q.enqueue(node);
-		q.enqueue(node2);
-		q.enqueue(node3);
-		q.enqueue(node4);
-		q.print();
+	
+	
 		}
 }

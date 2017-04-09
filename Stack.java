@@ -26,6 +26,7 @@ public class Stack {
 		else{
 			Node temp = this.top;
 			top = top.getNext();
+			System.out.println("pop -> " + temp.getName());
 			return temp;
 		}
 	}
